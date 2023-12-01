@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div className="bg-custom_gray_text text-custom_gray_color">
+    <div className="bg-custom_gray text-custom_gray_color">
       <footer className="footer py-10 md:py-10 lg:py-10 px-2 max-w-7xl mx-auto">
         <nav>
           <header className="footer-title">Branch -1</header>
@@ -35,7 +35,7 @@ const Footer = () => {
           <p>(Available : Sat - Thu, 10:00 AM to 5:00 PM)</p>
         </nav>
         <nav>
-          <header className="footer-title">Useful Links</header>
+          <header className="footer-title">ABOUT US</header>
           <p className="link link-hover">
             <Link to="/about">About us</Link>
           </p>
@@ -49,7 +49,7 @@ const Footer = () => {
       </footer>
       <footer className="footer footer-center bg-custom_gray_color text-custom_gray border-t-2 p-4">
         <aside>
-          <p> © Copy 2023. All Rights Reserved </p>
+          <p> Copyright © 2023, Sova Tech, All Rights Reserved </p>
         </aside>
       </footer>
     </div>
