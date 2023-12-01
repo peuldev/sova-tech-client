@@ -10,10 +10,10 @@ const Navbar = () => {
       </li>
 
       <li>
-        <NavLink to="/Wishlist">Wishlist</NavLink>
+        <NavLink to="/wishlist">Wishlist</NavLink>
       </li>
       <li>
-        <NavLink to="/Shop">Shop</NavLink>
+        <NavLink to="/shop">Shop</NavLink>
       </li>
       <li>
         <NavLink to="/blog">Blog</NavLink>
@@ -22,7 +22,7 @@ const Navbar = () => {
         <NavLink to="/contact">Contact</NavLink>
       </li>
       <li>
-        <NavLink to="/Faqpage">Faq Page</NavLink>
+        <NavLink to="/faqpage">Faq Page</NavLink>
       </li>
       <li>
         <NavLink to="/login">Login</NavLink>
@@ -31,7 +31,7 @@ const Navbar = () => {
         <NavLink to="/register">Register</NavLink>
       </li>
       <li>
-        <NavLink to="/cart">
+        <NavLink className="text-xl" to="/cart">
           <FaCartShopping />
         </NavLink>
       </li>
