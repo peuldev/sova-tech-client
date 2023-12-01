@@ -1,7 +1,11 @@
+import { Outlet } from "react-router-dom";
+import Footer from "../Pages/Shared/Footer";
+
 const Root = () => {
   return (
-    <div>
-      <h1>Root</h1>
+    <div className="font-Rubik">
+      <Outlet></Outlet>
+      <Footer></Footer>
     </div>
   );
 };
