@@ -1,36 +1,36 @@
 import { Link, NavLink } from "react-router-dom";
 import { FaCartShopping } from "react-icons/fa6";
-import logo from "../../assets/logo/logo.jpg";
+import tow from "../../assets/logo/tow.png";
 
 const Navbar = () => {
   const navLinks = (
     <>
-      <li>
+      <li className="hover:text-custom_white">
         <NavLink to="/">Home</NavLink>
       </li>
 
-      <li>
+      <li className="hover:text-custom_white">
         <NavLink to="/wishlist">Wishlist</NavLink>
       </li>
-      <li>
+      <li className="hover:text-custom_white">
         <NavLink to="/shop">Shop</NavLink>
       </li>
-      <li>
+      <li className="hover:text-custom_white">
         <NavLink to="/blog">Blog</NavLink>
       </li>
-      <li>
+      <li className="hover:text-custom_white">
         <NavLink to="/contact">Contact</NavLink>
       </li>
-      <li>
+      <li className="hover:text-custom_white">
         <NavLink to="/faqpage">Faq Page</NavLink>
       </li>
-      <li>
+      <li className="hover:text-custom_white">
         <NavLink to="/login">Login</NavLink>
       </li>
-      <li>
+      <li className="hover:text-custom_white">
         <NavLink to="/register">Register</NavLink>
       </li>
-      <li>
+      <li className="hover:text-custom_white">
         <NavLink className="text-xl" to="/cart">
           <FaCartShopping />
         </NavLink>
@@ -38,7 +38,7 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-custom_yellow">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -65,7 +65,7 @@ const Navbar = () => {
           </ul>
         </div>
         <Link to="/">
-          <img src={logo} alt="" />
+          <img src={tow} alt="" />
         </Link>
       </div>
       <div className="navbar-end hidden lg:flex">

@@ -47,9 +47,15 @@ const Footer = () => {
           </a>
         </nav>
       </footer>
-      <footer className="footer footer-center bg-custom_gray_color text-custom_gray border-t-2 p-4">
+      <footer className="footer footer-center border-t-2 p-4">
         <aside>
-          <p> Copyright © 2023, Sova Tech, All Rights Reserved </p>
+          <p>
+            Copyright © 2023.
+            <Link className="hover:underline" to="/">
+              Sova Tech
+            </Link>
+            . All Rights Reserved
+          </p>
         </aside>
       </footer>
     </div>
