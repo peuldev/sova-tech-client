@@ -4,7 +4,7 @@ const Login = () => {
   return (
     <div>
       <form className="card-body lg:w-1/2 mx-auto">
-        <h3 className="text-2xl text-center font-semibold">Account Login</h3>
+        <h3 className="text-2xl text-center font-semibold border-b-2">Account Login</h3>
         <div className="form-control">
           <label className="label">
             <span className="label-text">E-Mail Address</span>

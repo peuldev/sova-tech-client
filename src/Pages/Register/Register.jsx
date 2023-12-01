@@ -3,7 +3,10 @@ import { Link } from "react-router-dom";
 const Register = () => {
   return (
     <div>
-      <form className="card-body lg:w-1/2 mx-auto lg:mt-14">
+      <form className="card-body lg:w-1/2 mx-auto">
+        <h3 className="text-2xl text-center font-semibold border-b-2">
+          Register Account
+        </h3>
         <div className="form-control">
           <label className="label">
             <span className="label-text">First Name</span>
