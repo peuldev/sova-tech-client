@@ -2,9 +2,17 @@ import { Link } from "react-router-dom";
 import logo from "../../assets/logo/gogle.svg";
 
 const Login = () => {
+  const handleLogin = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const email = form.email.value;
+    const password = form.password.value;
+    const loginInfo = { email, password };
+    console.log(loginInfo);
+  };
   return (
     <div>
-      <form className="card-body lg:w-1/2 mx-auto">
+      <form className="card-body lg:w-1/2 mx-auto" onSubmit={handleLogin}>
         <h3 className="text-2xl text-center font-semibold border-b-2">
           Account Login
         </h3>

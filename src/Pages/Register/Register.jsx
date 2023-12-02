@@ -1,9 +1,20 @@
 import { Link } from "react-router-dom";
 
 const Register = () => {
+  const handleRegister = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const fristName = form.first_name.value;
+    const lastName = form.last_name.value;
+    const email = form.email.value;
+    const password = form.password.value;
+    const photo = form.photo.value;
+    const registerInfo = { fristName, lastName, email, password, photo };
+    console.log(registerInfo);
+  };
   return (
     <div>
-      <form className="card-body lg:w-1/2 mx-auto">
+      <form className="card-body lg:w-1/2 mx-auto" onSubmit={handleRegister}>
         <h3 className="text-2xl text-center font-semibold border-b-2">
           Register Account
         </h3>
@@ -53,6 +64,18 @@ const Register = () => {
             className="input input-bordered"
             required
             name="password"
+          />
+        </div>
+        <div className="form-control">
+          <label className="label">
+            <span className="label-text">Photo Url</span>
+          </label>
+          <input
+            type="photo"
+            placeholder="Photo URL"
+            className="input input-bordered"
+            required
+            name="photo"
           />
           <label className="label">
             <a href="#" className="label-text-alt link link-hover">
