@@ -1,9 +1,13 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Context/AuthProviders";
+import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
 
 const Register = () => {
   const { createUser } = useContext(AuthContext);
+  const [registerError, setRegisterError] = useState("");
+  const [success, setSuccess] = useState("");
+  const [showPassword, setshowPassword] = useState(false);
   const handleRegister = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -11,7 +15,8 @@ const Register = () => {
     const lastName = form.last_name.value;
     const email = form.email.value;
     const password = form.password.value;
-    const photoURL = form.photo.value;
+    const photoURL = form.photoURL.value;
+    const accepted = e.target.terms.checked;
     const registerInfo = {
       fristName,
       lastName,
@@ -20,12 +25,34 @@ const Register = () => {
       photo: photoURL,
     };
     console.log(registerInfo);
+    // pass check
+    if (password.length < 6) {
+      setRegisterError("is less than 6 characters");
+      return;
+    }
+    // validation cheak
+    else if (!/[A-Z]/.test(password)) {
+      setRegisterError("don't have a capital letter");
+      return;
+    }
+
+    // term and conditions checkbox
+    else if (!accepted) {
+      setRegisterError("Please accepted term and conditions");
+      return;
+    }
+    // error reset
+    setRegisterError("");
+    setSuccess("");
+    // create user new user
     createUser(email, password)
       .then((result) => {
         console.log(result.user);
+        setSuccess("User Account Created Successfully");
       })
       .catch((error) => {
         console.error(error);
+        setRegisterError(error.message);
       });
   };
   return (
@@ -34,6 +61,8 @@ const Register = () => {
         <h3 className="text-2xl text-center font-semibold border-b-2">
           Register Account
         </h3>
+        {registerError && <p>{registerError}</p>}
+        {success && <p>{success}</p>}
         <div className="form-control">
           <label className="label">
             <span className="label-text">First Name</span>
@@ -75,12 +104,24 @@ const Register = () => {
             <span className="label-text">Password</span>
           </label>
           <input
-            type="password"
+            type={showPassword ? "text" : "password"}
             placeholder="Password"
             className="input input-bordered"
             required
             name="password"
           />
+          <div className="flex justify-end">
+            <span
+              className="absolute -mt-7 pr-6"
+              onClick={() => setshowPassword(!showPassword)}
+            >
+              {showPassword ? (
+                <AiFillEye></AiFillEye>
+              ) : (
+                <AiFillEyeInvisible></AiFillEyeInvisible>
+              )}
+            </span>
+          </div>
         </div>
         <div className="form-control">
           <label className="label">
@@ -96,6 +137,18 @@ const Register = () => {
           <label className="label">
             <a href="#" className="label-text-alt link link-hover">
               Forgot password?
+            </a>
+          </label>
+        </div>
+        {/* trems  */}
+        <div>
+          <input type="checkbox" name="terms" id="terms" />
+          <label className="ml-2 " htmlFor="terms">
+            Accept{" "}
+            <a href="">
+              <span className="hover:underline text-custom_bg">
+                Terms and conditions
+              </span>
             </a>
           </label>
         </div>
