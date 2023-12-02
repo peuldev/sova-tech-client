@@ -5,7 +5,7 @@ const Product = () => {
     <div
       className="p-20 rounded lg:my-20 md:my-10 my-5"
       style={{
-        height: "400px",
+        backgroundSize: "cover",
         backgroundImage: `url(${logo})`,
       }}
     >
