@@ -5,7 +5,6 @@ import Home from "../Pages/Home/Home";
 import Shop from "../Pages/Shop/Shop";
 import Blog from "../Pages/Blog/Blog";
 import Faqpage from "../Pages/Faqpage/Faqpage";
-import Login from "../Pages/login/login";
 import Register from "../Pages/Register/Register";
 import Cart from "../Pages/Cart/Cart";
 import Wishlist from "../Pages/Wishlist/Wishlist";
@@ -14,6 +13,8 @@ import MobilePhones from "../Pages/Home/MobilePhones";
 import SmartWatches from "../Pages/Home/SmartWatches";
 import SmartTv from "../Pages/Home/SmartTv";
 import HeadPhones from "../Pages/Home/HeadPhones";
+import Login from "../Pages/Login/Login";
+import PrivateRoute from "./PrivateRoute";
 
 const Routers = createBrowserRouter([
   {
@@ -31,13 +32,13 @@ const Routers = createBrowserRouter([
       },
       {
         path: "/shop",
-        element: <Shop></Shop>,
+        element: (
+          <PrivateRoute>
+            <Shop></Shop>
+          </PrivateRoute>
+        ),
       },
 
-      {
-        path: "/blog",
-        element: <Blog></Blog>,
-      },
       {
         path: "/contact",
         element: <Contact></Contact>,
@@ -56,7 +57,11 @@ const Routers = createBrowserRouter([
       },
       {
         path: "/cart",
-        element: <Cart></Cart>,
+        element: (
+          <PrivateRoute>
+            <Cart></Cart>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/mobilephones",
