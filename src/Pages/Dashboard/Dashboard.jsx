@@ -13,6 +13,19 @@ const Dashboard = () => {
 
     const product = { title, price, stock, code, color, brand, photo, details };
     console.log(product);
+
+    // sent date server
+    fetch("http://localhost:5000/newproduct", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(product),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      });
   };
   return (
     <div>
