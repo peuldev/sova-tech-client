@@ -1,10 +1,13 @@
 import { Link } from "react-router-dom";
+import logo from "../../assets/logo/gogle.svg";
 
 const Login = () => {
   return (
     <div>
       <form className="card-body lg:w-1/2 mx-auto">
-        <h3 className="text-2xl text-center font-semibold border-b-2">Account Login</h3>
+        <h3 className="text-2xl text-center font-semibold border-b-2">
+          Account Login
+        </h3>
         <div className="form-control">
           <label className="label">
             <span className="label-text">E-Mail Address</span>
@@ -45,6 +48,10 @@ const Login = () => {
               Register Here
             </Link>
           </p>
+          <div className="flex items-center mx-auto border rounded-lg cursor-pointer hover:bg-custom_blue hover:text-custom_white py-2 px-5">
+            <img className="w-5" src={logo} alt="" />
+            <p className="ml-2"> Sign up with Google</p>
+          </div>
         </div>
       </form>
     </div>
