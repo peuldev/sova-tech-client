@@ -1,7 +1,12 @@
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo/gogle.svg";
+import { useContext, useState } from "react";
+import { AuthContext } from "../../Context/AuthProviders";
 
 const Login = () => {
+  const { signIn } = useContext(AuthContext);
+  const [loginError, setloginError] = useState("");
+  const [loginsuccess, setLoginSuccess] = useState("");
   const handleLogin = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -9,6 +14,17 @@ const Login = () => {
     const password = form.password.value;
     const loginInfo = { email, password };
     console.log(loginInfo);
+    setloginError("");
+    setLoginSuccess("");
+    signIn(email, password)
+      .then((result) => {
+        console.log(result.user);
+        setLoginSuccess("login successful");
+      })
+      .catch((error) => {
+        console.error(error);
+        setloginError(error.message);
+      });
   };
   return (
     <div>
@@ -16,6 +32,8 @@ const Login = () => {
         <h3 className="text-2xl text-center font-semibold border-b-2">
           Account Login
         </h3>
+        {loginError && <p>{loginError}</p>}
+        {loginsuccess && <p>{loginsuccess}</p>}
         <div className="form-control">
           <label className="label">
             <span className="label-text">E-Mail Address</span>
