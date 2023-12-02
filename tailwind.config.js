@@ -7,6 +7,7 @@ export default {
     },
     colors: {
       custom_blue: "#1fb6ff",
+      custom_red: "#e80f0f",
       custom_yellow: "#fed700",
       custom_white: "#FFFFFF",
       custom_black: "#303030",
