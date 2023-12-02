@@ -10,6 +10,10 @@ import Register from "../Pages/Register/Register";
 import Cart from "../Pages/Cart/Cart";
 import Wishlist from "../Pages/Wishlist/Wishlist";
 import Contact from "../Pages/Contact/Contact";
+import MobilePhones from "../Pages/CategoryPage/MobilePhones";
+import SmartWatches from "../Pages/CategoryPage/SmartWatches";
+import SmartTv from "../Pages/CategoryPage/SmartTv";
+import HeadPhones from "../Pages/CategoryPage/HeadPhones";
 
 const Routers = createBrowserRouter([
   {
@@ -53,6 +57,22 @@ const Routers = createBrowserRouter([
       {
         path: "/cart",
         element: <Cart></Cart>,
+      },
+      {
+        path: "/mobilephones",
+        element: <MobilePhones></MobilePhones>,
+      },
+      {
+        path: "/smartwatches",
+        element: <SmartWatches></SmartWatches>,
+      },
+      {
+        path: "/smarttv",
+        element: <SmartTv></SmartTv>,
+      },
+      {
+        path: "/headphone",
+        element: <HeadPhones></HeadPhones>,
       },
     ],
   },

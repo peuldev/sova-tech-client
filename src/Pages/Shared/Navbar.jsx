@@ -8,13 +8,7 @@ const Navbar = () => {
       <li className="hover:text-custom_white">
         <NavLink to="/">Home</NavLink>
       </li>
-      {/* <li className="hover:text-custom_white">
-        <NavLink to="/category">Category</NavLink>
-      </li> */}
       <div className="dropdown dropdown-end">
-        {/* <div tabIndex={0} role="button">
-          Dropdown
-        </div> */}
         <li tabIndex={0} role="button" className="hover:text-custom_white">
           <li>Category</li>
         </li>
@@ -23,16 +17,16 @@ const Navbar = () => {
           className="menu dropdown-content z-[1] p-2 shadow bg-base-100 rounded-box w-52 mt-4"
         >
           <li>
-            <a>Mobile Phones</a>
+            <NavLink to="mobilephones">Mobile Phones</NavLink>
           </li>
           <li>
-            <a>Smart Watches</a>
+            <NavLink to="smartwatches">Smart Watches</NavLink>
           </li>
           <li>
-            <a>Smart TVs</a>
+            <NavLink to="smarttv">Smart TV</NavLink>
           </li>
           <li>
-            <a>Head Phones</a>
+            <NavLink to="headphone">Head Phones</NavLink>
           </li>
         </ul>
       </div>
