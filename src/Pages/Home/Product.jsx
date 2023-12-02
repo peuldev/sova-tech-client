@@ -13,11 +13,11 @@ const Product = () => {
         <p>
           Sale Offer <span className="text-custom_red">-20% Off</span> This Week
         </p>
-        <h3 className="text-3xl font-medium">
+        <h3 className="lg:text-3xl font-medium">
           Featured Product <br />
           Apple Accessories 2018
         </h3>
-        <p className=" text-xl lg:my-5">
+        <p className=" text-xl lg:my-5 my-2">
           Starting at{" "}
           <span className="text-custom_red font-bold text-2xl">$1209.00</span>
         </p>
