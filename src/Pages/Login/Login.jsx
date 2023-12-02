@@ -4,7 +4,7 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../../Context/AuthProviders";
 
 const Login = () => {
-  const { signIn } = useContext(AuthContext);
+  const { signIn, signInWithGoogle } = useContext(AuthContext);
   const [loginError, setloginError] = useState("");
   const [loginsuccess, setLoginSuccess] = useState("");
   const handleLogin = (e) => {
@@ -20,10 +20,20 @@ const Login = () => {
       .then((result) => {
         console.log(result.user);
         setLoginSuccess("login successful");
+        e.target.reset();
       })
       .catch((error) => {
         console.error(error);
         setloginError(error.message);
+      });
+  };
+  const handeGoogleLogin = () => {
+    signInWithGoogle()
+      .then((result) => {
+        console.log(result.user);
+      })
+      .then((error) => {
+        console.error(error);
       });
   };
   return (
@@ -74,7 +84,10 @@ const Login = () => {
               Register Here
             </Link>
           </p>
-          <div className="flex items-center mx-auto border rounded-lg cursor-pointer hover:bg-custom_blue hover:text-custom_white py-2 px-5">
+          <div
+            onClick={handeGoogleLogin}
+            className="flex items-center mx-auto border rounded-lg cursor-pointer hover:bg-custom_blue hover:text-custom_white py-2 px-5"
+          >
             <img className="w-5" src={logo} alt="" />
             <p className="ml-2"> Sign up with Google</p>
           </div>

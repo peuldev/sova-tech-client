@@ -49,6 +49,7 @@ const Register = () => {
       .then((result) => {
         console.log(result.user);
         setSuccess("User Account Created Successfully");
+        e.target.reset();
       })
       .catch((error) => {
         console.error(error);

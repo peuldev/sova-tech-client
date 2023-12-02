@@ -1,8 +1,14 @@
 import { Link, NavLink } from "react-router-dom";
 import { FaCartShopping } from "react-icons/fa6";
 import tow from "../../assets/logo/tow.png";
+import { AuthContext } from "../../Context/AuthProviders";
+import { useContext } from "react";
 
 const Navbar = () => {
+  const { user, logOut } = useContext(AuthContext);
+  const handleSignOut = () => {
+    logOut();
+  };
   const navLinks = (
     <>
       <li className="hover:text-custom_white">
@@ -90,8 +96,28 @@ const Navbar = () => {
           <img src={tow} alt="" />
         </Link>
       </div>
-      <div className="navbar-end hidden lg:flex">
+      <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{navLinks}</ul>
+      </div>
+      <div className="navbar-end">
+        <div>
+          <p className="mx-5">{user && <span>{user.email}</span>}</p>
+        </div>
+
+        {user ? (
+          <p
+            onClick={handleSignOut}
+            className="bg-custom_blue rounded py-2 px-6 inline text-xl cursor-pointer "
+          >
+            Sign Out
+          </p>
+        ) : (
+          <Link to="/login">
+            <p className="cursor-pointer bg-custom_blue rounded py-2 px-6 inline text-xl ">
+              Login
+            </p>
+          </Link>
+        )}
       </div>
     </div>
   );
