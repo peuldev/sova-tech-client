@@ -15,6 +15,7 @@ import SmartTv from "../Pages/Home/SmartTv";
 import HeadPhones from "../Pages/Home/HeadPhones";
 import Login from "../Pages/Login/Login";
 import PrivateRoute from "./PrivateRoute";
+import Dashboard from "../Pages/Dashboard/Dashboard";
 
 const Routers = createBrowserRouter([
   {
@@ -32,11 +33,7 @@ const Routers = createBrowserRouter([
       },
       {
         path: "/shop",
-        element: (
-          <PrivateRoute>
-            <Shop></Shop>
-          </PrivateRoute>
-        ),
+        element: <Shop></Shop>,
       },
 
       {
@@ -78,6 +75,14 @@ const Routers = createBrowserRouter([
       {
         path: "/headphone",
         element: <HeadPhones></HeadPhones>,
+      },
+      {
+        path: "/Dashboard",
+        element: (
+          <PrivateRoute>
+            <Dashboard></Dashboard>
+          </PrivateRoute>
+        ),
       },
     ],
   },

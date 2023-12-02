@@ -59,6 +59,9 @@ const Navbar = () => {
         <NavLink to="/register">Register</NavLink>
       </li>
       <li className="hover:text-custom_white">
+        <NavLink to="/Dashboard">Dashboard</NavLink>
+      </li>
+      <li className="hover:text-custom_white">
         <NavLink className="text-xl" to="/cart">
           <FaCartShopping />
         </NavLink>
