@@ -25,7 +25,7 @@ const Banner = () => {
                   $824.00
                 </span>
               </p>
-              <Link to="/mobilephones">
+              <Link to="/shop">
                 <p className="px-5 py-2 cursor-pointer bg-custom_yellow text-custom_white rounded inline hover:bg-custom_gray_color">
                   Shop Now
                 </p>
@@ -58,7 +58,7 @@ const Banner = () => {
                   $424.00
                 </span>
               </p>
-              <Link to="/smartwatches">
+              <Link to="/shop">
                 <p className="px-5 py-2 cursor-pointer bg-custom_yellow text-custom_white rounded inline hover:bg-custom_gray_color">
                   Shop Now
                 </p>
@@ -91,7 +91,7 @@ const Banner = () => {
                   $124.00
                 </span>
               </p>
-              <Link to="/smarttv">
+              <Link to="/shop">
                 <p className="px-5 py-2 cursor-pointer bg-custom_yellow text-custom_white rounded inline hover:bg-custom_gray_color">
                   Shop Now
                 </p>
@@ -124,7 +124,7 @@ const Banner = () => {
                   $124.00
                 </span>
               </p>
-              <Link to="/headphone">
+              <Link to="/shop">
                 <p className="px-5 py-2 cursor-pointer bg-custom_yellow text-custom_white rounded inline hover:bg-custom_gray_color">
                   Shop Now
                 </p>
