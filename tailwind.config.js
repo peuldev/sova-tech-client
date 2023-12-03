@@ -12,7 +12,7 @@ export default {
       custom_white: "#FFFFFF",
       custom_black: "#303030",
       custom_color: "#F3F3F3",
-      custom_gray: "#f7f7f7",
+      custom_gray: "#eef0f1",
       custom_gray_color: "#7b7b7b",
       custom_gray_btn: "#eef0f1",
     },

@@ -11,7 +11,7 @@ const Home = () => {
     <div>
       <div>
         <Banner></Banner>
-        <div>
+        <div className="grid lg:grid-cols-4 md:grid-cols-3 gap-5 mx-auto py-20">
           {products.map((product) => (
             <MobilePhones key={product._id} product={product}></MobilePhones>
           ))}
