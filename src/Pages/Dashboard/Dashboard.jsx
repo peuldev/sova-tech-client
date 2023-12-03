@@ -16,13 +16,16 @@ const Dashboard = () => {
     console.log(product);
 
     // sent date server
-    fetch("http://localhost:5000/newproduct", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(product),
-    })
+    fetch(
+      "https://sova-tech-server-cxv7yoze5-peul-dev71.vercel.app/newproduct",
+      {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(product),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

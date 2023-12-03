@@ -20,13 +20,16 @@ const UpdateProduct = () => {
     console.log(update);
 
     // sent date server
-    fetch(`http://localhost:5000/newproduct/${_id}`, {
-      method: "PUT",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(update),
-    })
+    fetch(
+      `https://sova-tech-server-cxv7yoze5-peul-dev71.vercel.app/newproduct/${_id}`,
+      {
+        method: "PUT",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(update),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
