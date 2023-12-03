@@ -1,4 +1,7 @@
+
+
 const HeadPhones = () => {
+
   return (
     <div>
       <h1>Head Phones</h1>

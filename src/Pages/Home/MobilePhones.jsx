@@ -1,7 +1,10 @@
-const MobilePhones = () => {
+const MobilePhones = ({ product }) => {
+  // console.log(product.title);
+  const { title } = product;
+
   return (
     <div>
-      <h1>Mobile Phones</h1>
+      <h1>{title}</h1>
     </div>
   );
 };
