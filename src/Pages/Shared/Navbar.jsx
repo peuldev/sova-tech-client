@@ -14,28 +14,6 @@ const Navbar = () => {
       <li className="hover:text-custom_white">
         <NavLink to="/">Home</NavLink>
       </li>
-      <div className="dropdown dropdown-end">
-        <li tabIndex={0} role="button" className="hover:text-custom_white">
-          <li>Category</li>
-        </li>
-        <ul
-          tabIndex={0}
-          className="menu dropdown-content z-[1] p-2 shadow bg-base-100 rounded-box w-52 mt-4"
-        >
-          <li>
-            <NavLink to="/phones">Mobile Phones</NavLink>
-          </li>
-          <li>
-            <NavLink to="/wacth">Smart Watches</NavLink>
-          </li>
-          <li>
-            <NavLink to="/newtv">Smart TV</NavLink>
-          </li>
-          <li>
-            <NavLink to="/headp">Head Phones</NavLink>
-          </li>
-        </ul>
-      </div>
 
       <li className="hover:text-custom_white">
         <NavLink to="/wishlist">Wishlist</NavLink>
@@ -43,9 +21,6 @@ const Navbar = () => {
       <li className="hover:text-custom_white">
         <NavLink to="/shop">Shop</NavLink>
       </li>
-      {/* <li className="hover:text-custom_white">
-        <NavLink to="/blog">Blog</NavLink>
-      </li> */}
       <li className="hover:text-custom_white">
         <NavLink to="/contact">Contact</NavLink>
       </li>

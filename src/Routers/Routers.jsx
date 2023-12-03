@@ -18,10 +18,6 @@ import PrivateRoute from "./PrivateRoute";
 import Dashboard from "../Pages/Dashboard/Dashboard";
 import ProductDetails from "../Pages/Home/ProductDetails";
 import UpdateProduct from "../Pages/Home/UpdateProduct";
-import Phones from "../Pages/Category/phones";
-import Wacth from "../Pages/Category/Wacth";
-import NewTv from "../Pages/Category/NewTv";
-import Headp from "../Pages/Category/Headp";
 
 const Routers = createBrowserRouter([
   {
@@ -104,23 +100,6 @@ const Routers = createBrowserRouter([
       {
         path: "/headphone",
         element: <HeadPhones></HeadPhones>,
-      },
-      // catagory page
-      {
-        path: "/phones",
-        element: <Phones></Phones>,
-      },
-      {
-        path: "/wacth",
-        element: <Wacth></Wacth>,
-      },
-      {
-        path: "/newtv",
-        element: <NewTv></NewTv>,
-      },
-      {
-        path: "/headp",
-        element: <Headp></Headp>,
       },
       {
         path: "/Dashboard",
