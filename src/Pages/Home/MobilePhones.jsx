@@ -7,7 +7,7 @@ const MobilePhones = ({ product }) => {
   const { _id, title, photo, price } = product;
 
   return (
-    <div>
+    <div className="border-2 rounded border-custom_gray">
       <img className="rounded-t-lg" src={photo} alt="" />
       <div className="bg-custom_gray p-2 ">
         <p className="text-xl">{title}</p>
