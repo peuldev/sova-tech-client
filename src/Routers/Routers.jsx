@@ -16,6 +16,7 @@ import HeadPhones from "../Pages/Home/HeadPhones";
 import Login from "../Pages/Login/Login";
 import PrivateRoute from "./PrivateRoute";
 import Dashboard from "../Pages/Dashboard/Dashboard";
+import ProductDetails from "../Pages/Home/ProductDetails";
 
 const Routers = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const Routers = createBrowserRouter([
         path: "/",
         element: <Home></Home>,
         loader: () => fetch("http://localhost:5000/newproduct"),
+      },
+      {
+        path: "/product/:id",
+        element: <ProductDetails></ProductDetails>,
       },
       {
         path: "/Wishlist",
@@ -65,6 +70,7 @@ const Routers = createBrowserRouter([
         path: "/mobilephones",
         element: <MobilePhones></MobilePhones>,
       },
+
       {
         path: "/smartwatches",
         element: <SmartWatches></SmartWatches>,
