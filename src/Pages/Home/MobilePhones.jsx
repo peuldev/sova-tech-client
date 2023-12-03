@@ -23,9 +23,11 @@ const MobilePhones = ({ product }) => {
               <TbListDetails />
             </p>
           </Link>
-          <p className="cursor-pointer hover:bg-custom_yellow  hover:text-custom_white px-2 py-2 rounded">
-            <RxUpdate />
-          </p>
+          <Link to={`/updateproduct/${_id}`}>
+            <p className="cursor-pointer hover:bg-custom_yellow  hover:text-custom_white px-2 py-2 rounded">
+              <RxUpdate />
+            </p>
+          </Link>
         </div>
       </div>
     </div>

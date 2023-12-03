@@ -17,6 +17,7 @@ import Login from "../Pages/Login/Login";
 import PrivateRoute from "./PrivateRoute";
 import Dashboard from "../Pages/Dashboard/Dashboard";
 import ProductDetails from "../Pages/Home/ProductDetails";
+import UpdateProduct from "../Pages/Home/UpdateProduct";
 
 const Routers = createBrowserRouter([
   {
@@ -31,7 +32,17 @@ const Routers = createBrowserRouter([
       },
       {
         path: "/product/:id",
-        element: <ProductDetails></ProductDetails>,
+        element: (
+          <PrivateRoute>
+            <ProductDetails></ProductDetails>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/updateproduct/:id",
+        element: <UpdateProduct></UpdateProduct>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/newproduct/${params.id}`),
       },
       {
         path: "/Wishlist",
