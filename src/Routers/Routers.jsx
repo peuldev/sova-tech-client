@@ -28,10 +28,7 @@ const Routers = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () =>
-          fetch(
-            "https://sova-tech-server-cxv7yoze5-peul-dev71.vercel.app/newproduct"
-          ),
+        loader: () => fetch("http://localhost:5000/newproduct"),
       },
       {
         path: "/product/:id",
@@ -41,9 +38,7 @@ const Routers = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(
-            `https://sova-tech-server-cxv7yoze5-peul-dev71.vercel.app/newproduct/${params.id}`
-          ),
+          fetch(`http://localhost:5000/newproduct/${params.id}`),
       },
       {
         path: "/updateproduct/:id",
@@ -53,9 +48,7 @@ const Routers = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(
-            `https://sova-tech-server-cxv7yoze5-peul-dev71.vercel.app/newproduct/${params.id}`
-          ),
+          fetch(`http://localhost:5000/newproduct/${params.id}`),
       },
       {
         path: "/Wishlist",
@@ -64,10 +57,7 @@ const Routers = createBrowserRouter([
       {
         path: "/shop",
         element: <Shop></Shop>,
-        loader: () =>
-          fetch(
-            "https://sova-tech-server-cxv7yoze5-peul-dev71.vercel.app/newproduct"
-          ),
+        loader: () => fetch("http://localhost:5000/newproduct"),
       },
 
       {
