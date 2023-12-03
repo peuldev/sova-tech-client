@@ -20,7 +20,7 @@ const UpdateProduct = () => {
     console.log(update);
 
     // sent date server
-    fetch(`http://localhost:5000/newproduct/${_id}`, {
+    fetch(`https://sova-tech.onrender.com/newproduct/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

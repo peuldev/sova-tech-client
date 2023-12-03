@@ -16,7 +16,7 @@ const Dashboard = () => {
     console.log(product);
 
     // sent date server
-    fetch("http://localhost:5000/newproduct", {
+    fetch("https://sova-tech.onrender.com/newproduct", {
       method: "POST",
       headers: {
         "content-type": "application/json",
