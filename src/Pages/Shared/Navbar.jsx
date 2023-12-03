@@ -23,16 +23,16 @@ const Navbar = () => {
           className="menu dropdown-content z-[1] p-2 shadow bg-base-100 rounded-box w-52 mt-4"
         >
           <li>
-            <NavLink to="mobilephones">Mobile Phones</NavLink>
+            <NavLink to="/phones">Mobile Phones</NavLink>
           </li>
           <li>
-            <NavLink to="smartwatches">Smart Watches</NavLink>
+            <NavLink to="/wacth">Smart Watches</NavLink>
           </li>
           <li>
-            <NavLink to="smarttv">Smart TV</NavLink>
+            <NavLink to="/newtv">Smart TV</NavLink>
           </li>
           <li>
-            <NavLink to="headphone">Head Phones</NavLink>
+            <NavLink to="/headp">Head Phones</NavLink>
           </li>
         </ul>
       </div>
