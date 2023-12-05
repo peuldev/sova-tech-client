@@ -2,7 +2,7 @@ import { TbListDetails } from "react-icons/tb";
 import { RxUpdate } from "react-icons/rx";
 import { Link } from "react-router-dom";
 
-const MobilePhones = ({ product }) => {
+const SmartWatch = ({ product }) => {
   // console.log(product.title);
   const { _id, title, photo, price } = product;
 
@@ -43,4 +43,4 @@ const MobilePhones = ({ product }) => {
   );
 };
 
-export default MobilePhones;
+export default SmartWatch;
