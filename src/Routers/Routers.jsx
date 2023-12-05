@@ -11,8 +11,8 @@ import Contact from "../Pages/Contact/Contact";
 import Login from "../Pages/Login/Login";
 import PrivateRoute from "./PrivateRoute";
 import Dashboard from "../Pages/Dashboard/Dashboard";
-import ProductDetails from "../Pages/Home/ProductDetails";
-import UpdateProduct from "../Pages/Home/UpdateProduct";
+import ProductDetails from "../Pages/Watch/ProductDetails";
+import UpdateProduct from "../Pages/Watch/UpdateProduct";
 
 const Routers = createBrowserRouter([
   {

@@ -1,6 +1,6 @@
 import { useLoaderData } from "react-router-dom";
-import Banner from "./Banner";
-import SmartWatch from "./SmartWatch";
+import Banner from "../Banner/Banner";
+import SmartWatch from "../Watch/SmartWatch";
 const Home = () => {
   const products = useLoaderData();
   return (
