@@ -70,7 +70,7 @@ const Navbar = () => {
             {navLinks}
           </ul>
         </div>
-        <Link to="/">
+        <Link className="hidden lg:flex" to="/">
           <img src={tow} alt="" />
         </Link>
       </div>
@@ -79,7 +79,7 @@ const Navbar = () => {
       </div>
       <div className="navbar-end">
         <div>
-          <p className="mx-5">{user && <span>{user.email}</span>}</p>
+          <p className="lg:mx-5 md:mx-5">{user && <span>{user.email}</span>}</p>
         </div>
 
         {user ? (
@@ -91,7 +91,7 @@ const Navbar = () => {
           </p>
         ) : (
           <Link to="/login">
-            <p className="cursor-pointer bg-custom_blue rounded py-2 px-6 inline text-xl ">
+            <p className="cursor-pointer bg-custom_blue rounded py-2 px-2 inline text-xl ">
               Login
             </p>
           </Link>

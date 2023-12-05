@@ -16,7 +16,6 @@ const SmartWatch = ({ product }) => {
         </p>
         <div className="flex items-center pb-5 ">
           <p
-            // B6BBC4
             className="border border-custom_gray_color hover:bg-custom_yellow cursor-pointer rounded  hover:text-custom_white hover:border-custom_gray px-2 py-1 tooltip"
             data-tip="Add to Cart"
           >
