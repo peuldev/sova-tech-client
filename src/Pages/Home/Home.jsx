@@ -1,9 +1,5 @@
 import { useLoaderData } from "react-router-dom";
 import Banner from "./Banner";
-import HeadPhones from "./HeadPhones";
-import Product from "./Product";
-import SmartTv from "./SmartTv";
-import SmartWatches from "./SmartWatches";
 import MobilePhones from "./MobilePhones";
 const Home = () => {
   const products = useLoaderData();
@@ -16,10 +12,6 @@ const Home = () => {
             <MobilePhones key={product._id} product={product}></MobilePhones>
           ))}
         </div>
-        <SmartWatches></SmartWatches>
-        <HeadPhones></HeadPhones>
-        <Product></Product>
-        <SmartTv></SmartTv>
       </div>
     </div>
   );

@@ -3,16 +3,11 @@ import Root from "../Root/Root";
 import ErrorPage from "../Error/ErrorPage";
 import Home from "../Pages/Home/Home";
 import Shop from "../Pages/Shop/Shop";
-import Blog from "../Pages/Blog/Blog";
 import Faqpage from "../Pages/Faqpage/Faqpage";
 import Register from "../Pages/Register/Register";
 import Cart from "../Pages/Cart/Cart";
 import Wishlist from "../Pages/Wishlist/Wishlist";
 import Contact from "../Pages/Contact/Contact";
-import MobilePhones from "../Pages/Home/MobilePhones";
-import SmartWatches from "../Pages/Home/SmartWatches";
-import SmartTv from "../Pages/Home/SmartTv";
-import HeadPhones from "../Pages/Home/HeadPhones";
 import Login from "../Pages/Login/Login";
 import PrivateRoute from "./PrivateRoute";
 import Dashboard from "../Pages/Dashboard/Dashboard";
@@ -83,23 +78,6 @@ const Routers = createBrowserRouter([
             <Cart></Cart>
           </PrivateRoute>
         ),
-      },
-      {
-        path: "/mobilephones",
-        element: <MobilePhones></MobilePhones>,
-      },
-
-      {
-        path: "/smartwatches",
-        element: <SmartWatches></SmartWatches>,
-      },
-      {
-        path: "/smarttv",
-        element: <SmartTv></SmartTv>,
-      },
-      {
-        path: "/headphone",
-        element: <HeadPhones></HeadPhones>,
       },
       {
         path: "/Dashboard",
