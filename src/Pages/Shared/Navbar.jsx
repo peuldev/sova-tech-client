@@ -35,6 +35,9 @@ const Navbar = () => {
       <li className="hover:text-custom_white">
         <NavLink to="/Dashboard">Dashboard</NavLink>
       </li>
+      <li className="hover:text-custom_white">
+        <NavLink to="/cart">Cart</NavLink>
+      </li>
     </>
   );
   return (
