@@ -5,7 +5,6 @@ import Home from "../Pages/Home/Home";
 import Shop from "../Pages/Shop/Shop";
 import Faqpage from "../Pages/Faqpage/Faqpage";
 import Register from "../Pages/Register/Register";
-import Cart from "../Pages/Cart/Cart";
 import Wishlist from "../Pages/Wishlist/Wishlist";
 import Contact from "../Pages/Contact/Contact";
 import Login from "../Pages/Login/Login";
@@ -35,6 +34,7 @@ const Routers = createBrowserRouter([
         loader: ({ params }) =>
           fetch(`https://sova-tech.onrender.com/newproduct/${params.id}`),
       },
+
       {
         path: "/updateproduct/:id",
         element: (
@@ -70,16 +70,6 @@ const Routers = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>,
-      },
-      {
-        path: "/cart",
-        element: (
-          <PrivateRoute>
-            <Cart></Cart>
-          </PrivateRoute>
-        ),
-        loader: ({ params }) =>
-          fetch(`https://sova-tech.onrender.com/newproduct/${params.id}`),
       },
       {
         path: "/Dashboard",

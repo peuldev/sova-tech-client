@@ -1,5 +1,4 @@
 import { Link, NavLink } from "react-router-dom";
-import { FaCartShopping } from "react-icons/fa6";
 import tow from "../../assets/logo/tow.png";
 import { AuthContext } from "../../Context/AuthProviders";
 import { useContext } from "react";
@@ -35,11 +34,6 @@ const Navbar = () => {
       </li>
       <li className="hover:text-custom_white">
         <NavLink to="/Dashboard">Dashboard</NavLink>
-      </li>
-      <li className="hover:text-custom_white">
-        <NavLink className="text-xl" to="/cart">
-          <FaCartShopping />
-        </NavLink>
       </li>
     </>
   );
