@@ -36,7 +36,7 @@ const UpdateProduct = () => {
             title: "success",
             text: "Product Update SuccessFuly",
             icon: "success",
-            confirmButtonText: "Cool",
+            confirmButtonText: "OK",
           });
         }
       });

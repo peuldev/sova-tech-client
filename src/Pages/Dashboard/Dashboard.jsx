@@ -31,7 +31,7 @@ const Dashboard = () => {
             title: "success",
             text: "Product Add Successfully",
             icon: "success",
-            confirmButtonText: "Cool",
+            confirmButtonText: "Ok",
           });
         }
         form.reset();

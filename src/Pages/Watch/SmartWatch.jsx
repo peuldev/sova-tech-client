@@ -3,9 +3,7 @@ import { RxUpdate } from "react-icons/rx";
 import { Link } from "react-router-dom";
 
 const SmartWatch = ({ product }) => {
-  // console.log(product.title);
   const { _id, title, photo, price } = product;
-
   return (
     <div className="border-2 rounded border-custom_gray">
       <img className="rounded-t-lg" src={photo} alt="" />
