@@ -24,7 +24,6 @@ const Register = () => {
       password,
       photo: photoURL,
     };
-    console.log(registerInfo);
     // pass check
     if (password.length < 6) {
       setRegisterError("is less than 6 characters");
@@ -47,7 +46,6 @@ const Register = () => {
     // create user new user
     createUser(email, password)
       .then((result) => {
-        console.log(result.user);
         setSuccess("User Account Created Successfully");
         e.target.reset();
       })

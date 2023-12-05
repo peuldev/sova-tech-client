@@ -13,12 +13,14 @@ const SmartWatch = ({ product }) => {
           $ <span className="font-semibold text-custom_red"> {price}</span>{" "}
         </p>
         <div className="flex items-center pb-5 ">
-          <p
-            className="border border-custom_gray_color hover:bg-custom_yellow cursor-pointer rounded  hover:text-custom_white hover:border-custom_gray px-2 py-1 tooltip"
-            data-tip="Add to Cart"
-          >
-            ADD TO CART
-          </p>
+          <Link to={`/cart/:${_id}`}>
+            <p
+              className="border border-custom_gray_color hover:bg-custom_yellow cursor-pointer rounded  hover:text-custom_white hover:border-custom_gray px-2 py-1 tooltip"
+              data-tip="Add to Cart"
+            >
+              ADD TO CART
+            </p>
+          </Link>
           <Link to={`/product/${_id}`}>
             <p
               className=" cursor-pointer hover:bg-custom_yellow   hover:text-custom_white px-2 py-2 rounded tooltip"

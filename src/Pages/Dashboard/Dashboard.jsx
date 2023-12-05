@@ -13,7 +13,6 @@ const Dashboard = () => {
     const details = form.details.value;
 
     const product = { title, price, stock, code, color, brand, photo, details };
-    console.log(product);
 
     // sent date server
     fetch("https://sova-tech.onrender.com/newproduct", {
@@ -25,7 +24,6 @@ const Dashboard = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         if (data.insertedId) {
           Swal.fire({
             title: "success",

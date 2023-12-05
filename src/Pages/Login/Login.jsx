@@ -14,12 +14,10 @@ const Login = () => {
     const email = form.email.value;
     const password = form.password.value;
     const loginInfo = { email, password };
-    console.log(loginInfo);
     setloginError("");
     setLoginSuccess("");
     signIn(email, password)
       .then((result) => {
-        console.log(result.user);
         setLoginSuccess("login successful");
         e.target.reset();
         navigate("/");
@@ -31,12 +29,8 @@ const Login = () => {
   };
   const handeGoogleLogin = () => {
     signInWithGoogle()
-      .then((result) => {
-        console.log(result.user);
-      })
-      .then((error) => {
-        console.error(error);
-      });
+      .then((result) => {})
+      .then((error) => {});
   };
   return (
     <div>

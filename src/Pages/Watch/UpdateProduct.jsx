@@ -18,7 +18,6 @@ const UpdateProduct = () => {
     const details = form.details.value;
 
     const update = { title, price, stock, code, color, brand, photo, details };
-    console.log(update);
 
     // sent date server
     fetch(`https://sova-tech.onrender.com/newproduct/${_id}`, {
@@ -30,7 +29,6 @@ const UpdateProduct = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         if (data.matchedCount) {
           Swal.fire({
             title: "success",

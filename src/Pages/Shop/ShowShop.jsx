@@ -2,7 +2,6 @@ import { TbListDetails } from "react-icons/tb";
 import { RxUpdate } from "react-icons/rx";
 import { Link } from "react-router-dom";
 const ShowShop = ({ product }) => {
-  console.log(product);
   const { _id, title, photo, price } = product;
   return (
     <div>

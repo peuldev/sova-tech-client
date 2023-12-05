@@ -78,6 +78,8 @@ const Routers = createBrowserRouter([
             <Cart></Cart>
           </PrivateRoute>
         ),
+        loader: ({ params }) =>
+          fetch(`https://sova-tech.onrender.com/newproduct/${params.id}`),
       },
       {
         path: "/Dashboard",

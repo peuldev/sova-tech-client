@@ -3,7 +3,6 @@ import { useLoaderData, useParams } from "react-router-dom";
 const ProductDetails = () => {
   const products = useLoaderData();
   const { title, price, stock, code, color, brand, photo, details } = products;
-  console.log(products);
   const { id } = useParams();
   return (
     <div className="mb-20">
