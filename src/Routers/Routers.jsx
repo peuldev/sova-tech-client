@@ -22,7 +22,7 @@ const Routers = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch("https://sova-tech.onrender.com/newproduct"),
+        loader: () => fetch("http://localhost:5000/newproduct"),
       },
       {
         path: "/product/:id",
@@ -32,7 +32,7 @@ const Routers = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`https://sova-tech.onrender.com/newproduct/${params.id}`),
+          fetch(`http://localhost:5000/newproduct/${params.id}`),
       },
 
       {
@@ -43,7 +43,7 @@ const Routers = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`https://sova-tech.onrender.com/newproduct/${params.id}`),
+          fetch(`http://localhost:5000/newproduct/${params.id}`),
       },
       {
         path: "/Wishlist",
@@ -52,7 +52,7 @@ const Routers = createBrowserRouter([
       {
         path: "/shop",
         element: <Shop></Shop>,
-        loader: () => fetch("https://sova-tech.onrender.com/newproduct"),
+        loader: () => fetch("http://localhost:5000/newproduct"),
       },
 
       {
