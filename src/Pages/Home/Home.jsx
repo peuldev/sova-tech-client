@@ -14,15 +14,6 @@ const Home = () => {
     <div>
       <div>
         <Banner></Banner>
-        <div className="grid lg:grid-cols-4 md:grid-cols-3 gap-5 mx-auto py-20">
-          {products.map((product) => (
-            <SmartWatch
-              key={product._id}
-              product={product}
-              addToCart={addToCart}
-            ></SmartWatch>
-          ))}
-        </div>
       </div>
     </div>
   );
