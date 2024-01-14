@@ -1,7 +1,8 @@
 import { useLoaderData } from "react-router-dom";
-import Banner from "../Banner/Banner";
-import SmartWatch from "../Watch/SmartWatch";
+import Banner from "../../Banner/Banner";
+import SmartWatch from "../../Watch/SmartWatch";
 import { useState } from "react";
+import Latest from "../Latest/Latest";
 const Home = () => {
   const products = useLoaderData();
   const [cart, setCart] = useState([]);
@@ -12,9 +13,8 @@ const Home = () => {
   };
   return (
     <div>
-      <div>
-        <Banner></Banner>
-      </div>
+      <Banner></Banner>
+      <Latest></Latest>
     </div>
   );
 };
