@@ -12,6 +12,12 @@ import PrivateRoute from "./PrivateRoute";
 import Dashboard from "../Pages/Dashboard/Dashboard";
 import ProductDetails from "../Pages/Watch/ProductDetails";
 import UpdateProduct from "../Pages/Watch/UpdateProduct";
+import Monitor from "../Pages/Home/Latest/Monitor/Monitor";
+import Mobile from "../Pages/Home/Latest/Mobile/Mobile";
+import Keyboard from "../Pages/Home/Latest/Keyboard/Keyboard";
+import Headphone from "../Pages/Home/Latest/Headphone/Headphone";
+import Laptop from "../Pages/Home/Latest/Laptop/Laptop";
+import Airpods from "../Pages/Home/Latest/Airpods/Airpods";
 
 const Routers = createBrowserRouter([
   {
@@ -22,6 +28,30 @@ const Routers = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+      },
+      {
+        path: "/monitor",
+        element: <Monitor></Monitor>,
+      },
+      {
+        path: "/mobile",
+        element: <Mobile></Mobile>,
+      },
+      {
+        path: "/keyboard",
+        element: <Keyboard></Keyboard>,
+      },
+      {
+        path: "/headphone",
+        element: <Headphone></Headphone>,
+      },
+      {
+        path: "/labtop",
+        element: <Laptop></Laptop>,
+      },
+      {
+        path: "/airpods",
+        element: <Airpods></Airpods>,
       },
       {
         path: "/product/:id",

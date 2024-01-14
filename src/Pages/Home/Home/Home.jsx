@@ -2,7 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import Banner from "../../Banner/Banner";
 import SmartWatch from "../../Watch/SmartWatch";
 import { useState } from "react";
-import Latest from "../Latest/Latest";
+import Latest from "../Latest/Latest/Latest";
 const Home = () => {
   const products = useLoaderData();
   const [cart, setCart] = useState([]);
