@@ -2,7 +2,7 @@ import { TbListDetails } from "react-icons/tb";
 import { RxUpdate } from "react-icons/rx";
 import { Link } from "react-router-dom";
 
-const SmartWatch = ({ product, addToCart }) => {
+const SmartWatch = ({ product }) => {
   const { _id, title, photo, price } = product;
   return (
     <div className="border-2 rounded border-custom_gray">
@@ -15,7 +15,6 @@ const SmartWatch = ({ product, addToCart }) => {
         <div className="flex items-center pb-5 ">
           <Link>
             <p
-              onClick={() => addToCart(product)}
               className="border border-custom_gray_color hover:bg-custom_yellow cursor-pointer rounded  hover:text-custom_white hover:border-custom_gray px-2 py-1 tooltip"
               data-tip="Add to Cart"
             >

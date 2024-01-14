@@ -29,7 +29,9 @@ const Login = () => {
   };
   const handeGoogleLogin = () => {
     signInWithGoogle()
-      .then((result) => {})
+      .then((result) => {
+        navigate("/");
+      })
       .then((error) => {});
   };
   return (

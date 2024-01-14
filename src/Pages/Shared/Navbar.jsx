@@ -34,9 +34,11 @@ const Navbar = () => {
       <li className="hover:text-custom_white">
         <NavLink to="/contact">Contact</NavLink>
       </li>
-      <li className="hover:text-custom_white">
-        <NavLink to="/Dashboard">Dashboard</NavLink>
-      </li>
+      {user && (
+        <li className="hover:text-custom_white">
+          <NavLink to="/Dashboard">Dashboard</NavLink>
+        </li>
+      )}
       <li className="hover:text-custom_white">
         <NavLink to="/login">Login</NavLink>
       </li>
@@ -109,13 +111,13 @@ const Navbar = () => {
         {user ? (
           <p
             onClick={handleSignOut}
-            className="bg-custom_blue rounded py-2 px-6 inline text-xl cursor-pointer "
+            className="bg-custom_black text-custom_white rounded py-2 px-6 inline text-xl cursor-pointer "
           >
             Sign Out
           </p>
         ) : (
           <Link to="/login">
-            <p className="cursor-pointer bg-custom_blue rounded py-2 px-2 inline text-xl ">
+            <p className="cursor-pointer text-custom_white bg-custom_black rounded py-2 px-2 inline text-xl ">
               Login
             </p>
           </Link>
