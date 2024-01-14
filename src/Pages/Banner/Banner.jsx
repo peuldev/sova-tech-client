@@ -8,29 +8,17 @@ const Banner = () => {
       <div id="slide1" className="carousel-item relative w-full">
         <img src={mobile} className="w-full rounded" />
         <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-          <a href="#slide4" className="btn btn-circle">
-            ❮
-          </a>
-          <div className="lg:flex hidden space-y-5">
-            <div className="text-[#ECF4D6]">
-              <h3 className="lg:text-2xl md:text-2xl font-medium">
-                Sale Offer <span className="text-[#190482]">-10% Off</span> This
-                Week
-              </h3>
-              <p className="lg:text-4xl md:text-2xl">Iphone | 15-pro</p>
-              <p className="text-xl mb-5">
-                Starting at{" "}
-                <span className="text-2xl text-[#190482] font-semibold">
-                  $824.00
-                </span>
-              </p>
-              <Link to="/shop">
-                <p className="px-5 py-2 cursor-pointer bg-custom_yellow text-custom_white rounded inline hover:bg-custom_gray_color">
-                  Shop Now
-                </p>
-              </Link>
+          <div className='flex items-center'>
+            <a href="#slide4" className="btn btn-circle">
+              ❮
+            </a>
+            <div className='ms-10'>
+              <h1 className='text-4xl'>Test</h1>
+              <h1 className='text-4xl'>Test</h1>
+              <h1 className='text-4xl'>Test</h1>
             </div>
           </div>
+
           <a href="#slide2" className="btn btn-circle">
             ❯
           </a>
@@ -42,28 +30,7 @@ const Banner = () => {
           <a href="#slide1" className="btn btn-circle">
             ❮
           </a>
-          <div className="lg:flex hidden lg:mr-52 space-y-5">
-            <div className="text-[#ECF4D6]">
-              <h3 className="lg:text-2xl md:text-2xl font-medium">
-                Sale Offer <span className="text-[#190482]">-10% Off</span> This
-                Week
-              </h3>
-              <p className="lg:text-4xl md:text-2xl">
-                Kieslect KS 2 | Smart Watch
-              </p>
-              <p className="text-xl mb-5">
-                Starting at{" "}
-                <span className="text-2xl text-[#190482] font-semibold">
-                  $424.00
-                </span>
-              </p>
-              <Link to="/shop">
-                <p className="px-5 py-2 cursor-pointer bg-custom_yellow text-custom_white rounded inline hover:bg-custom_gray_color">
-                  Shop Now
-                </p>
-              </Link>
-            </div>
-          </div>
+          <div className="lg:flex hidden lg:mr-52 space-y-5">{/* Add */}</div>
           <a href="#slide3" className="btn btn-circle">
             ❯
           </a>
@@ -75,28 +42,7 @@ const Banner = () => {
           <a href="#slide2" className="btn btn-circle">
             ❮
           </a>
-          <div className="lg:flex hidden space-y-5">
-            <div className="text-[#ECF4D6]">
-              <h3 className="lg:text-2xl md:text-2xl font-medium">
-                Sale Offer <span className="text-[#190482]">-10% Off</span> This
-                Week
-              </h3>
-              <p className="lg:text-4xl md:text-2xl">
-                Sony Bravia 4K | Ultra HD
-              </p>
-              <p className="text-xl mb-5">
-                Starting at{" "}
-                <span className="text-2xl text-[#190482] font-semibold">
-                  $124.00
-                </span>
-              </p>
-              <Link to="/shop">
-                <p className="px-5 py-2 cursor-pointer bg-custom_yellow text-custom_white rounded inline hover:bg-custom_gray_color">
-                  Shop Now
-                </p>
-              </Link>
-            </div>
-          </div>
+          {/* Add  */}
           <a href="#slide1" className="btn btn-circle">
             ❯
           </a>
