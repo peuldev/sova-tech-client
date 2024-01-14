@@ -3,9 +3,7 @@ import Root from "../Root/Root";
 import ErrorPage from "../Error/ErrorPage";
 import Home from "../Pages/Home/Home/Home";
 import Shop from "../Pages/Shop/Shop";
-import Faqpage from "../Pages/Faqpage/Faqpage";
 import Register from "../Pages/Register/Register";
-import Wishlist from "../Pages/Wishlist/Wishlist";
 import Contact from "../Pages/Contact/Contact";
 import Login from "../Pages/Login/Login";
 import PrivateRoute from "./PrivateRoute";
@@ -75,10 +73,6 @@ const Routers = createBrowserRouter([
           fetch(`http://localhost:5000/newproduct/${params.id}`),
       },
       {
-        path: "/Wishlist",
-        element: <Wishlist></Wishlist>,
-      },
-      {
         path: "/shop",
         element: <Shop></Shop>,
         loader: () => fetch("http://localhost:5000/newproduct"),
@@ -87,10 +81,6 @@ const Routers = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact></Contact>,
-      },
-      {
-        path: "/faqpage",
-        element: <Faqpage></Faqpage>,
       },
       {
         path: "/login",

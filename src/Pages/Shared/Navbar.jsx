@@ -1,7 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
-import tow from "../../assets/logo/tow.png";
 import { AuthContext } from "../../Context/AuthProviders";
 import { useContext, useEffect, useState } from "react";
+import logo from "../../assets/logo/logo.png";
 
 const Navbar = () => {
   const [theme, setTheme] = useState(
@@ -28,10 +28,6 @@ const Navbar = () => {
       <li className="hover:text-custom_white">
         <NavLink to="/">Home</NavLink>
       </li>
-
-      <li className="hover:text-custom_white">
-        <NavLink to="/wishlist">Wishlist</NavLink>
-      </li>
       <li className="hover:text-custom_white">
         <NavLink to="/shop">Shop</NavLink>
       </li>
@@ -39,16 +35,10 @@ const Navbar = () => {
         <NavLink to="/contact">Contact</NavLink>
       </li>
       <li className="hover:text-custom_white">
-        <NavLink to="/faqpage">Faq Page</NavLink>
+        <NavLink to="/Dashboard">Dashboard</NavLink>
       </li>
       <li className="hover:text-custom_white">
         <NavLink to="/login">Login</NavLink>
-      </li>
-      <li className="hover:text-custom_white">
-        <NavLink to="/register">Register</NavLink>
-      </li>
-      <li className="hover:text-custom_white">
-        <NavLink to="/Dashboard">Dashboard</NavLink>
       </li>
       <li className="hover:text-custom_white">
         <NavLink to="/cart">Cart</NavLink>
@@ -59,7 +49,7 @@ const Navbar = () => {
 
         {/* sun icon */}
         <svg
-          className="swap-on fill-current w-10 h-10"
+          className="swap-on fill-current w-5 h-5"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
         >
@@ -68,7 +58,7 @@ const Navbar = () => {
 
         {/* moon icon */}
         <svg
-          className="swap-off fill-current w-10 h-10"
+          className="swap-off fill-current w-5 h-5"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
         >
@@ -78,7 +68,7 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="navbar bg-custom_yellow">
+    <div className="navbar border-b border-b-custom_gray">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -105,7 +95,7 @@ const Navbar = () => {
           </ul>
         </div>
         <Link className="hidden lg:flex" to="/">
-          <img src={tow} alt="" />
+          <img src={logo} alt="" />
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
