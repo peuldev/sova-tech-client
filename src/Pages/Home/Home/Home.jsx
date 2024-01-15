@@ -1,4 +1,4 @@
-import Banner from "../../Banner/Banner";
+import Banner from "../Banner/Banner";
 import DeliveryAbout from "../DeliveryAbout/DeliveryAbout";
 import Latest from "../Latest/Latest/Latest";
 import UpdateAirpod from "../UpdateAirpod/UpdateAirpod";

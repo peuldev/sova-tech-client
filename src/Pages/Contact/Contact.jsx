@@ -48,9 +48,7 @@ const Contact = () => {
               <p className="ml-2"> I agree with the terms and conditions.</p>
             </div>
             <div className="form-control mt-6 inline">
-              <p className=" inline p-3 rounded bg-custom_yellow hover:bg-custom_blue text-custom_white cursor-pointer px-5">
-                Send
-              </p>
+              <p className=" inline py-2 rounded bg-custom_blue text-custom_white cursor-pointer px-5 hover:bg-custom_gray">Send</p>
             </div>
           </form>
         </div>

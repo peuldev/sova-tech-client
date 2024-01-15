@@ -1,6 +1,6 @@
-import headphone from "../../assets/images/hedphone.jpg";
-import mobile from "../../assets/images/mobile.jpg";
-import tv from "../../assets/images/tv.jpg";
+import headphone from "../../../assets/images/hedphone.jpg";
+import mobile from "../../../assets/images/mobile.jpg";
+import tv from "../../../assets/images/tv.jpg";
 import { Link } from "react-router-dom";
 const Banner = () => {
   return (

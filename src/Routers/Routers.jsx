@@ -16,6 +16,7 @@ import Keyboard from "../Pages/Home/Latest/Keyboard/Keyboard";
 import Headphone from "../Pages/Home/Latest/Headphone/Headphone";
 import Laptop from "../Pages/Home/Latest/Laptop/Laptop";
 import Airpods from "../Pages/Home/Latest/Airpods/Airpods";
+import Cart from "../Pages/Cart/Cart";
 
 const Routers = createBrowserRouter([
   {
@@ -89,6 +90,10 @@ const Routers = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>,
+      },
+      {
+        path: "/cart",
+        element: <Cart></Cart>,
       },
       {
         path: "/Dashboard",
