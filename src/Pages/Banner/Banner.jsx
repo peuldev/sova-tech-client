@@ -20,7 +20,7 @@ const Banner = () => {
                 </p>
                 <p className="text-xl py-5">Lovable. Drawable. Magical.</p>
                 <Link to="/shop">
-                  <p className="px-5 py-2 cursor-pointer bg-custom_black text-custom_white rounded inline hover:bg-custom_gray hover:text-custom_black">
+                  <p className="px-5 py-2 cursor-pointer bg-custom_black text-custom_white rounded-full inline hover:bg-custom_gray hover:text-custom_black">
                     Shop Now
                   </p>
                 </Link>
@@ -48,7 +48,7 @@ const Banner = () => {
                 </p>
                 <p className="text-xl py-5">Samsung NEO QLED 8K QN800C</p>
                 <Link to="/shop">
-                  <p className="px-5 py-2 cursor-pointer bg-custom_black text-custom_white rounded inline hover:bg-custom_gray hover:text-custom_black">
+                  <p className="px-5 py-2 cursor-pointer bg-custom_black text-custom_white rounded-full inline hover:bg-custom_gray hover:text-custom_black">
                     Shop Now
                   </p>
                 </Link>
@@ -75,7 +75,7 @@ const Banner = () => {
                 </p>
                 <p className="text-xl py-5">High Fidelity Audio</p>
                 <Link to="/shop">
-                  <p className="px-5 py-2 cursor-pointer bg-custom_black text-custom_white rounded inline hover:bg-custom_gray hover:text-custom_black">
+                  <p className="px-5 py-2 cursor-pointer bg-custom_black text-custom_white rounded-full inline hover:bg-custom_gray hover:text-custom_black">
                     Shop Now
                   </p>
                 </Link>
