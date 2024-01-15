@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div className="bg-custom_gray text-custom_gray_color">
+    <div className="bg-[#F5F5F7]">
       <footer className="footer py-10 md:py-10 lg:py-10 px-2 max-w-7xl mx-auto">
         <nav>
           <header className="footer-title">Branch -1</header>
@@ -47,7 +47,7 @@ const Footer = () => {
           </a>
         </nav>
       </footer>
-      <footer className="footer footer-center border-t-2 p-4">
+      <footer className="footer footer-center border-t p-4">
         <aside>
           <p>
             Copyright © 2023.

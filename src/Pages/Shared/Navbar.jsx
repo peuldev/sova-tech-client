@@ -97,7 +97,8 @@ const Navbar = () => {
           </ul>
         </div>
         <Link className="hidden lg:flex" to="/">
-          <img src={logo} alt="" />
+          {/* <img src={logo} alt="" /> */}
+          <h1 className="text-2xl uppercase font-bold">Sova Cafe</h1>
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
