@@ -39,9 +39,15 @@ const Navbar = () => {
           <NavLink to="/Dashboard">Dashboard</NavLink>
         </li>
       )}
-      <li className="hover:text-custom_white">
-        <NavLink to="/login">Login</NavLink>
-      </li>
+
+      {user ? (
+        <p></p>
+      ) : (
+        <li className="hover:text-custom_white">
+          <NavLink to="/login">Login</NavLink>
+        </li>
+      )}
+
       <li className="hover:text-custom_white">
         <NavLink to="/cart">Cart</NavLink>
       </li>

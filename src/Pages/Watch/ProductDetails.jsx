@@ -1,5 +1,5 @@
 import { RxUpdate } from "react-icons/rx";
-import { useLoaderData, useParams } from "react-router-dom";
+import { Link, useLoaderData, useParams } from "react-router-dom";
 
 const ProductDetails = () => {
   const products = useLoaderData();
@@ -23,12 +23,14 @@ const ProductDetails = () => {
           <p className="lg:text-xl text-xl font-semibold text-[#FF0000]">
             $ {price}
           </p>
-          <div className="flex items-center bg-custom_blue w-1/3 justify-center py-1 text-custom_white">
-            <p>
-              <span className="cursor-pointer uppercase">Update</span>
-            </p>
-            <RxUpdate className="ms-2" />
-          </div>
+          {/* <Link to={`/updateproduct/${_id}`}>
+            <div className="flex items-center bg-custom_blue w-1/3 justify-center py-1 text-custom_white">
+              <p>
+                <span className="cursor-pointer uppercase">Update</span>
+              </p>
+              <RxUpdate className="ms-2" />
+            </div>
+          </Link> */}
         </div>
       </div>
       <div className="border-t px-2 py-2">
