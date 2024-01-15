@@ -5,7 +5,9 @@ const ShowMonitor = ({ monitor }) => {
   const { _id, title, photo, price } = monitor;
   return (
     <div className="border border-[#DFCCFB] rounded-t">
-      <img className="rounded-t-lg" src={photo} alt="" />
+      <div className="flex justify-center">
+        <img className="rounded-t-lg" src={photo} alt="" />
+      </div>
       <div className="p-2 bg-[#F2FFE9]">
         <p className="text-xl">{title}</p>
         <p className="text-xl pb-2">
