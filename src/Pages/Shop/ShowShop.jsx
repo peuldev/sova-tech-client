@@ -4,29 +4,30 @@ import { Link } from "react-router-dom";
 const ShowShop = ({ product }) => {
   const { _id, title, photo, price } = product;
   return (
-    <div>
-      <div>
-        <img className="rounded-t-lg" src={photo} alt="" />
-        <div className="bg-custom_gray p-2 ">
-          <p className="text-xl">{title}</p>
-          <p className="text-xl">
-            $ <span className="font-semibold text-custom_red"> {price}</span>{" "}
+    <div className="border border-[#DFCCFB] rounded-t">
+      <img className="rounded-t-lg" src={photo} alt="" />
+      <div className="p-2 bg-[#F2FFE9]">
+        <p className="text-xl">{title}</p>
+        <p className="text-xl pb-2">
+          $ <span className="font-semibold text-[#FF004D]"> {price}</span>{" "}
+        </p>
+        <div className="flex items-center">
+          <p className="cursor-pointer border border-[#DFCCFB] hover:bg-[#DFCCFB] hover:text-custom_white rounded px-2">
+            ADD TO CART
           </p>
-          <div className="flex items-center pb-5 ">
-            <p className="  bg-custom_gray cursor-pointer rounded hover:bg-custom_yellow hover:text-custom_white px-2 py-2">
-              ADD TO CART
+          <Link to={`/product/${_id}`}>
+            <p
+              className="cursor-pointer px-2 rounded tooltip"
+              data-tip="View Details"
+            >
+              <TbListDetails />
             </p>
-            <Link to={`/product/${_id}`}>
-              <p className=" cursor-pointer hover:bg-custom_yellow   hover:text-custom_white px-2 py-2 rounded">
-                <TbListDetails />
-              </p>
-            </Link>
-            <Link to={`/updateproduct/${_id}`}>
-              <p className="cursor-pointer hover:bg-custom_yellow  hover:text-custom_white px-2 py-2 rounded">
-                <RxUpdate />
-              </p>
-            </Link>
-          </div>
+          </Link>
+          {/* <Link to={`/updateproduct/${_id}`}>
+            <p className="cursor-pointer px-2 rounded">
+              <RxUpdate />
+            </p>
+          </Link> */}
         </div>
       </div>
     </div>

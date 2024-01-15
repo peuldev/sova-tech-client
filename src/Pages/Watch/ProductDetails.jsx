@@ -1,3 +1,4 @@
+import { RxUpdate } from "react-icons/rx";
 import { useLoaderData, useParams } from "react-router-dom";
 
 const ProductDetails = () => {
@@ -19,15 +20,18 @@ const ProductDetails = () => {
           <p className="lg:text-xl text-xl">Product code: {code}</p>
           <p className="lg:text-xl text-xl">Brand: {brand}</p>
           <p className="lg:text-xl text-xl">Color: {color}</p>
-          <p className="lg:text-xl text-xl font-semibold text-custom_red">
+          <p className="lg:text-xl text-xl font-semibold text-[#FF0000]">
             $ {price}
           </p>
-          <p className=" bg-custom_gray cursor-pointer rounded hover:bg-custom_yellow hover:text-custom_white px-2 py-2 tooltip">
-            ADD TO CART
-          </p>
+          <div className="flex items-center bg-custom_blue w-1/3 justify-center py-1 text-custom_white">
+            <p>
+              <span className="cursor-pointer uppercase">Update</span>
+            </p>
+            <RxUpdate className="ms-2" />
+          </div>
         </div>
       </div>
-      <div className="border-t-2 border-t-custom_gray_color px-2 py-2">
+      <div className="border-t px-2 py-2">
         <h1 className="lg:text-2xl font-semibold lg:py-4">Description</h1>
         <p>{details}</p>
       </div>
