@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import photo from "../../assets/images/image (13).webp";
 import { RiDeleteBinLine } from "react-icons/ri";
+import Swal from "sweetalert2";
 
 const Cart = () => {
   const [carts, setCart] = useState([]);
   const handleDelete = (id) => {
-    const proceed = confirm("are you sure delete");
     fetch(`http://localhost:5000/carts/${id}`, {
       method: "DELETE",
     })
@@ -13,7 +13,13 @@ const Cart = () => {
       .then((data) => {
         console.log(data);
         if (data.deletedCount > 0) {
-          alert("delete suscessfuly");
+          Swal.fire({
+            title: "Deleted!",
+            text: "Your Item has been deleted.",
+            icon: "success",
+            showConfirmButton: false,
+            timer: 1500,
+          });
           const remaining = carts.filter((cart) => cart._id !== id);
           setCart(remaining);
         }
