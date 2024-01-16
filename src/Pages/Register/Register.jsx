@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Context/AuthProviders";
 import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
 
@@ -8,6 +8,7 @@ const Register = () => {
   const [registerError, setRegisterError] = useState("");
   const [success, setSuccess] = useState("");
   const [showPassword, setshowPassword] = useState(false);
+  const navigate = useNavigate();
   const handleRegister = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -48,6 +49,7 @@ const Register = () => {
       .then((result) => {
         setSuccess("User Account Created Successfully");
         e.target.reset();
+        navigate("/");
       })
       .catch((error) => {
         console.error(error);

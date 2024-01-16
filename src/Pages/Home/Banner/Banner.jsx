@@ -19,7 +19,7 @@ const Banner = () => {
                   All-in-one for <br /> family fun
                 </p>
                 <p className="text-xl py-5">Lovable. Drawable. Magical.</p>
-                <Link to="/shop">
+                <Link to="/labtop">
                   <p className="px-5 py-2 cursor-pointer bg-custom_black text-custom_white rounded-full inline hover:bg-custom_gray hover:text-custom_black">
                     Shop Now
                   </p>
@@ -47,7 +47,7 @@ const Banner = () => {
                   Beauty in the details
                 </p>
                 <p className="text-xl py-5">Samsung NEO QLED 8K QN800C</p>
-                <Link to="/shop">
+                <Link to="/monitor">
                   <p className="px-5 py-2 cursor-pointer bg-custom_black text-custom_white rounded-full inline hover:bg-custom_gray hover:text-custom_black">
                     Shop Now
                   </p>
@@ -74,7 +74,7 @@ const Banner = () => {
                   A magical connection <br /> To your devices
                 </p>
                 <p className="text-xl py-5">High Fidelity Audio</p>
-                <Link to="/shop">
+                <Link to="/headphone">
                   <p className="px-5 py-2 cursor-pointer bg-custom_black text-custom_white rounded-full inline hover:bg-custom_gray hover:text-custom_black">
                     Shop Now
                   </p>

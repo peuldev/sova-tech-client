@@ -24,7 +24,7 @@ const Details = () => {
           </p>
         </div>
       </div>
-      <div className="border-t px-2 py-2">
+      <div className="border-t border-[#DFCCFB] px-2 py-2">
         <h1 className="lg:text-2xl font-semibold lg:py-4">Description</h1>
         <p>{details}</p>
       </div>
