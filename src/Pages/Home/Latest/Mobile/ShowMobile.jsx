@@ -1,8 +1,8 @@
 import React from "react";
 import { TbListDetails } from "react-icons/tb";
 
-const ShowMonitor = ({ monitor }) => {
-  const { _id, title, photo, price } = monitor;
+const ShowMobile = ({ mobile }) => {
+  const { _id, title, photo, price } = mobile;
   return (
     <div className="border border-[#DFCCFB] rounded-t">
       <div className="flex justify-center">
@@ -17,7 +17,6 @@ const ShowMonitor = ({ monitor }) => {
           <p className="cursor-pointer border border-[#DFCCFB] hover:bg-[#DFCCFB] hover:text-custom_white rounded px-2">
             ADD TO CART
           </p>
-
           <p
             className="cursor-pointer px-2 rounded tooltip"
             data-tip="View Details"
@@ -30,4 +29,4 @@ const ShowMonitor = ({ monitor }) => {
   );
 };
 
-export default ShowMonitor;
+export default ShowMobile;
