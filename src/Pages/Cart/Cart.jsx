@@ -6,7 +6,7 @@ import Swal from "sweetalert2";
 const Cart = () => {
   const [carts, setCart] = useState([]);
   const handleDelete = (id) => {
-    fetch(`http://localhost:5000/carts/${id}`, {
+    fetch(`https://brandshop-server-ivory.vercel.app/carts/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
@@ -26,7 +26,7 @@ const Cart = () => {
       });
   };
   useEffect(() => {
-    fetch("http://localhost:5000/carts")
+    fetch("https://brandshop-server-ivory.vercel.app/carts")
       .then((res) => res.json())
       .then((data) => setCart(data));
   }, []);

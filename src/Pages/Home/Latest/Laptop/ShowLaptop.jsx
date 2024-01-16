@@ -5,7 +5,7 @@ import Swal from "sweetalert2";
 
 const ShowLaptop = ({ labtop }) => {
   const handleAddToCart = (carts) => {
-    fetch("http://localhost:5000/carts", {
+    fetch("https://brandshop-server-ivory.vercel.app/carts", {
       method: "POST",
       headers: {
         "content-type": "application/json",

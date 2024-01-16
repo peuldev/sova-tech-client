@@ -61,7 +61,9 @@ const Routers = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/newproduct/${params.id}`),
+          fetch(
+            `https://brandshop-server-ivory.vercel.app/newproduct/${params.id}`
+          ),
       },
       {
         path: "/details/:id",
@@ -71,7 +73,9 @@ const Routers = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/device/${params.id}`),
+          fetch(
+            `https://brandshop-server-ivory.vercel.app/device/${params.id}`
+          ),
       },
 
       {
@@ -82,7 +86,9 @@ const Routers = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/newproduct/${params.id}`),
+          fetch(
+            `https://brandshop-server-ivory.vercel.app/newproduct/${params.id}`
+          ),
       },
       {
         path: "/shop",
@@ -91,7 +97,8 @@ const Routers = createBrowserRouter([
             <Shop></Shop>
           </PrivateRoute>
         ),
-        loader: () => fetch("http://localhost:5000/newproduct"),
+        loader: () =>
+          fetch("https://brandshop-server-ivory.vercel.app/newproduct"),
       },
 
       {

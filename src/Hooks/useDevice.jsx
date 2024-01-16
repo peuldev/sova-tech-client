@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 const useDevice = () => {
   const [device, setDevice] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/device")
+    fetch("https://brandshop-server-ivory.vercel.app/device")
       .then((data) => data.json())
       .then((data) => setDevice(data));
   }, []);

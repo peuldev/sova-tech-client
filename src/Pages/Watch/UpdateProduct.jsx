@@ -20,7 +20,7 @@ const UpdateProduct = () => {
     const update = { title, price, stock, code, color, brand, photo, details };
 
     // sent date server
-    fetch(`http://localhost:5000/newproduct/${_id}`, {
+    fetch(`https://brandshop-server-ivory.vercel.app/newproduct/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
