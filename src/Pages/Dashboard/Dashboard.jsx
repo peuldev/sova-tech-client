@@ -38,7 +38,9 @@ const Dashboard = () => {
   return (
     <div>
       <form className="card-body pb-24 " onSubmit={handleAddProduct}>
-        <h1 className="text-center uppercase text-2xl font-poppins font-semibold">New Product Add</h1>
+        <h1 className="text-center uppercase text-2xl font-poppins font-semibold">
+          New Product Add
+        </h1>
         {/* form row  */}
         <div className="lg:flex md:flex mb-2">
           <div className="form-control w-full">
