@@ -47,7 +47,7 @@ const Footer = () => {
           </a>
         </nav>
       </footer>
-      <footer className="footer footer-center border-t p-4">
+      <footer className="footer footer-center border-t border-t-[#DFCCFB] p-4">
         <aside>
           <p>
             Copyright © 2023.
