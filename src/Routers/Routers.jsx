@@ -70,8 +70,8 @@ const Routers = createBrowserRouter([
             <Details></Details>
           </PrivateRoute>
         ),
-        // loader: ({ params }) =>
-        //   fetch(`http://localhost:5000/newproduct/${params.id}`),
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/device/${params.id}`),
       },
 
       {

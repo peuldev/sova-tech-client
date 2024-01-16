@@ -4,7 +4,6 @@ import { Link, useLoaderData, useParams } from "react-router-dom";
 const ProductDetails = () => {
   const products = useLoaderData();
   const { title, price, stock, code, color, brand, photo, details } = products;
-  const { id } = useParams();
   return (
     <div className="mb-20">
       <h1 className="text-center text-custom_blue lg:text-4xl md:text-2xl text-xl py-5 underline">
@@ -23,14 +22,6 @@ const ProductDetails = () => {
           <p className="lg:text-xl text-xl font-semibold text-[#FF0000]">
             $ {price}
           </p>
-          {/* <Link to={`/updateproduct/${_id}`}>
-            <div className="flex items-center bg-custom_blue w-1/3 justify-center py-1 text-custom_white">
-              <p>
-                <span className="cursor-pointer uppercase">Update</span>
-              </p>
-              <RxUpdate className="ms-2" />
-            </div>
-          </Link> */}
         </div>
       </div>
       <div className="border-t px-2 py-2">
