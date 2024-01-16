@@ -1,7 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../Context/AuthProviders";
 import { useContext, useEffect, useState } from "react";
-import logo from "../../assets/logo/logo.png";
 
 const Navbar = () => {
   const [theme, setTheme] = useState(
@@ -103,8 +102,7 @@ const Navbar = () => {
           </ul>
         </div>
         <Link className="hidden lg:flex" to="/">
-          {/* <img src={logo} alt="" /> */}
-          <h1 className="text-2xl uppercase font-bold">Sova Cafe</h1>
+          <h1 className="text-2xl uppercase font-bold">Sova Tech</h1>
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">

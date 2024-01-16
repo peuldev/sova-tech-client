@@ -10,7 +10,7 @@ const Mobile = () => {
     <div>
       <div className="flex justify-center">
         <h1 className="my-10 text-center text-4xl border-b border-b-[#DFCCFB] w-1/4 pb-2">
-          Explore Monitor
+          Explore Mobile
         </h1>
       </div>
       <div className="grid lg:grid-cols-4 md:grid-cols-3 gap-5 mx-auto pb-20">
