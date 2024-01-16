@@ -1,6 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../Context/AuthProviders";
 import { useContext, useEffect, useState } from "react";
+import { RxAvatar } from "react-icons/rx";
 
 const Navbar = () => {
   const [theme, setTheme] = useState(
@@ -109,10 +110,12 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">{navLinks}</ul>
       </div>
       <div className="navbar-end">
-        <div>
-          <p className="lg:mx-5 md:mx-5">{user && <span>{user.email}</span>}</p>
+        <div className="flex items-center">
+          <p className="mr-2">{user && <span>{user.email}</span>}</p>
+          <p className="mr-2">
+            {user ? <RxAvatar className="text-4xl" /> : <p></p>}
+          </p>
         </div>
-
         {user ? (
           <p
             onClick={handleSignOut}
