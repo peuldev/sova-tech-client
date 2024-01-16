@@ -3,7 +3,22 @@ import photo from "../../assets/images/image (13).webp";
 import { RiDeleteBinLine } from "react-icons/ri";
 
 const Cart = () => {
-  const [cart, setCart] = useState([]);
+  const [carts, setCart] = useState([]);
+  const handleDelete = (id) => {
+    const proceed = confirm("are you sure delete");
+    fetch(`http://localhost:5000/carts/${id}`, {
+      method: "DELETE",
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.deletedCount > 0) {
+          alert("delete suscessfuly");
+          const remaining = carts.filter((cart) => cart._id !== id);
+          setCart(remaining);
+        }
+      });
+  };
   useEffect(() => {
     fetch("http://localhost:5000/carts")
       .then((res) => res.json())
@@ -17,8 +32,11 @@ const Cart = () => {
             Check Products
           </h1>
         </div>
-        {cart.map((item) => (
-          <div className="flex items-center border justify-between border-[#DFCCFB] rounded my-5">
+        {carts.map((item) => (
+          <div
+            key={item._id}
+            className="flex items-center border justify-between border-[#DFCCFB] rounded my-5"
+          >
             <div className="flex items-center">
               <img className="w-28 mx-2" src={item.photo} alt="" />
               <div className="my-2">
@@ -34,7 +52,10 @@ const Cart = () => {
                 </p>
               </div>
             </div>
-            <div className="mx-5 bg-[#EB57574D] p-2 rounded-full hover:bg-custom_blue cursor-pointer ">
+            <div
+              onClick={() => handleDelete(item._id)}
+              className="mx-5 bg-[#EB57574D] p-2 rounded-full hover:bg-custom_blue cursor-pointer "
+            >
               <RiDeleteBinLine className="text-2xl text-[#FF6868] hover:text-custom_white" />
             </div>
           </div>
