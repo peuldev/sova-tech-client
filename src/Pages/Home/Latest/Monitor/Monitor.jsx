@@ -1,16 +1,10 @@
 import React, { useEffect, useState } from "react";
 import ShowMonitor from "./ShowMonitor";
+import useDevice from "../../../../Hooks/useDevice";
 
 const Monitor = () => {
-  const [monitors, setMonitors] = useState([]);
-  useEffect(() => {
-    fetch("http://localhost:5000/device")
-      .then((res) => res.json())
-      .then((data) => {
-        const monitors = data.filter((item) => item.category === "monitor");
-        setMonitors(monitors);
-      });
-  }, []);
+  const [device] = useDevice();
+  const monitors = device.filter((item) => item.category === "monitor");
   return (
     <div>
       <div className="flex justify-center">
@@ -20,7 +14,7 @@ const Monitor = () => {
       </div>
       <div className="grid lg:grid-cols-4 md:grid-cols-3 gap-5 mx-auto pb-20">
         {monitors.map((monitor) => (
-          <ShowMonitor monitor={monitor}></ShowMonitor>
+          <ShowMonitor monitor={monitor} key={monitor._id}></ShowMonitor>
         ))}
       </div>
     </div>
