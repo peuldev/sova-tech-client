@@ -34,8 +34,8 @@ const Cart = () => {
     <div className="flex justify-center">
       <div className="pb-10">
         <div className="flex justify-center">
-          <h1 className="text-3xl text-center mt-5 border-b border-[#DFCCFB] w-1/3">
-            Check Products
+          <h1 className="text-3xl text-center mt-5 border-b border-[#DFCCFB] w-1/2">
+            Check Products {carts.length}
           </h1>
         </div>
         {carts.map((item) => (
