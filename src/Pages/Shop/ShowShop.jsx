@@ -1,5 +1,3 @@
-import { TbListDetails } from "react-icons/tb";
-import { RxUpdate } from "react-icons/rx";
 import { Link } from "react-router-dom";
 const ShowShop = ({ product }) => {
   const { _id, title, photo, price } = product;
@@ -12,23 +10,20 @@ const ShowShop = ({ product }) => {
           $ <span className="font-semibold text-[#FF004D]"> {price}</span>{" "}
         </p>
         <div className="flex items-center">
-          <p className="cursor-pointer border border-[#DFCCFB] hover:bg-[#DFCCFB] hover:text-custom_white rounded px-2">
-            ADD TO CART
-          </p>
           <Link to={`/product/${_id}`}>
             <p
-              className="cursor-pointer px-2 rounded tooltip"
+              className="cursor-pointer px-2 rounded tooltip border hover:bg-custom_blue hover:text-custom_white"
               data-tip="View Details"
             >
-              <TbListDetails />
+              Details
             </p>
           </Link>
           <Link to={`/updateproduct/${_id}`}>
             <p
-              className="cursor-pointer px-2 rounded tooltip"
+              className="cursor-pointer px-2 rounded tooltip border ms-2"
               data-tip="Update Here"
             >
-              <RxUpdate />
+              Update
             </p>
           </Link>
         </div>
