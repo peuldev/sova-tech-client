@@ -14,7 +14,7 @@ const Keyboard = () => {
       </div>
       <div className="grid lg:grid-cols-4 md:grid-cols-3 gap-5 mx-auto pb-20">
         {keyboards.map((keyboard) => (
-          <ShowKeyboard keyboard={keyboard}></ShowKeyboard>
+          <ShowKeyboard keyboard={keyboard} key={keyboard._id}></ShowKeyboard>
         ))}
       </div>
     </div>

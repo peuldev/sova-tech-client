@@ -14,7 +14,7 @@ const Laptop = () => {
       </div>
       <div className="grid lg:grid-cols-4 md:grid-cols-3 gap-5 mx-auto pb-20">
         {labtops.map((labtop) => (
-          <ShowLaptop labtop={labtop}></ShowLaptop>
+          <ShowLaptop labtop={labtop} key={labtop._id}></ShowLaptop>
         ))}
       </div>
     </div>

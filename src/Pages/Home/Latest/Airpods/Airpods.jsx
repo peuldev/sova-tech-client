@@ -14,7 +14,7 @@ const Airpods = () => {
       </div>
       <div className="grid lg:grid-cols-4 md:grid-cols-3 gap-5 mx-auto pb-20">
         {airpods.map((airpod) => (
-          <ShowAirpods airpod={airpod}></ShowAirpods>
+          <ShowAirpods airpod={airpod} key={airpod._id}></ShowAirpods>
         ))}
       </div>
     </div>
