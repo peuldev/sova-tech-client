@@ -1,5 +1,6 @@
 import React from "react";
 import { TbListDetails } from "react-icons/tb";
+import { Link } from "react-router-dom";
 
 const ShowMonitor = ({ monitor }) => {
   const { _id, title, photo, price } = monitor;
@@ -17,13 +18,14 @@ const ShowMonitor = ({ monitor }) => {
           <p className="cursor-pointer border border-[#DFCCFB] hover:bg-[#DFCCFB] hover:text-custom_white rounded px-2">
             ADD TO CART
           </p>
-
-          <p
-            className="cursor-pointer px-2 rounded tooltip"
-            data-tip="View Details"
-          >
-            <TbListDetails />
-          </p>
+          <Link to={`/details/${_id}`}>
+            <p
+              className="cursor-pointer px-2 rounded tooltip"
+              data-tip="View Details"
+            >
+              <TbListDetails />
+            </p>
+          </Link>
         </div>
       </div>
     </div>

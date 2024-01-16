@@ -23,11 +23,14 @@ const ShowShop = ({ product }) => {
               <TbListDetails />
             </p>
           </Link>
-          {/* <Link to={`/updateproduct/${_id}`}>
-            <p className="cursor-pointer px-2 rounded">
+          <Link to={`/updateproduct/${_id}`}>
+            <p
+              className="cursor-pointer px-2 rounded tooltip"
+              data-tip="Update Here"
+            >
               <RxUpdate />
             </p>
-          </Link> */}
+          </Link>
         </div>
       </div>
     </div>

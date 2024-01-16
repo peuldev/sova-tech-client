@@ -17,6 +17,7 @@ import Headphone from "../Pages/Home/Latest/Headphone/Headphone";
 import Laptop from "../Pages/Home/Latest/Laptop/Laptop";
 import Airpods from "../Pages/Home/Latest/Airpods/Airpods";
 import Cart from "../Pages/Cart/Cart";
+import Details from "../Pages/Home/Latest/Details/Details";
 
 const Routers = createBrowserRouter([
   {
@@ -61,6 +62,16 @@ const Routers = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(`http://localhost:5000/newproduct/${params.id}`),
+      },
+      {
+        path: "/details/:id",
+        element: (
+          <PrivateRoute>
+            <Details></Details>
+          </PrivateRoute>
+        ),
+        // loader: ({ params }) =>
+        //   fetch(`http://localhost:5000/newproduct/${params.id}`),
       },
 
       {
