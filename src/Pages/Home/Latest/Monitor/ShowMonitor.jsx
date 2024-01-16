@@ -19,6 +19,8 @@ const ShowMonitor = ({ monitor }) => {
             title: "Sova Tech",
             text: "Product Add Successfully",
             icon: "success",
+            showConfirmButton: false,
+            timer: 1500,
           });
         }
       });
